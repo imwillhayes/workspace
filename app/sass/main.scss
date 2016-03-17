@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-03-17 10:25:12
+ * @version $Id$
+ */
+$c:#45457f;
+
+ h1{
+ 	font-size: 20px;
+ 	color: red;
+ 	border:1px solid;
+ 	transform: translateX(50px);
+ 	border-color: $c;
+ 	width: 100px;
+ }
+
