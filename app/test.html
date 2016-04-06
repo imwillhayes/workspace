@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>123</title>
+    <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+      
+    </style>
+</head>
+<body>
+<button onclick="geoFindMe()">Show my location</button>
+<p id="out"></p>
+   <script> 
+      function geoFindMe() {
+        var output = document.getElementById("out");
+
+        if (!navigator.geolocation) {
+          output.innerHTML = "<p>您的浏览器不支持地理位置</p>";
+          return;
+        }
+
+        function success(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+        alert(latitude)
+        alert(longitude)
+
+
+          output.innerHTML = '<p><Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+
+          var img = new Image();
+          img.src = "http://api.map.baidu.com/staticimage/v2?ak=DuGtacc0w57K2lKLcxDkGwKPg81zfBMT?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+          output.appendChild(img);
+        };
+
+        function error() {
+          output.innerHTML = "无法获取您的位置";
+        };
+
+        output.innerHTML = "<p>Locating…</p>";
+        navigator.geolocation.getCurrentPosition(success, error);
+          
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+}
+
+div{
+	width: 100px;
+	height: 100px;
+	margin: 300px auto;
+	border-radius: 5px;
+	background-color: tan;
+	margin: 100px auto;
+}
+.active{
+	animation: 1s a infinite linear alternate;
+}
+
+@keyframes a{
+	to{
+		transform: scale(1.2);
+	}
+}

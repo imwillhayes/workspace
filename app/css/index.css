@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+div {
+  width: 100px;
+  height: 100px;
+  margin: 300px auto;
+  border-radius: 5px;
+  background-color: tan;
+  margin: 100px auto; }
+
+.active {
+  -webkit-animation: 1s a infinite linear alternate;
+          animation: 1s a infinite linear alternate; }
+
+@-webkit-keyframes a {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+@keyframes a {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
